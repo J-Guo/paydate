@@ -7,10 +7,15 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Authy\AuthyApi;
-use App\User;
+use App\Client;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function submitOTP(Request $request){
 
         //get mobile number from user input
@@ -33,11 +38,11 @@ class AuthController extends Controller
 
         if($sms->ok()){
             //check user exist or not
-            $results = User::where('mobile',$mobileNum)->first();
+            $results = Client::where('mobile',$mobileNum)->first();
 
             //if user does not exist, register of him
             if(empty($results )){
-                $newUser = new User();
+                $newUser = new Client();
                 $newUser->mobile = $mobileNum;
                 $newUser->save();
 
@@ -79,7 +84,5 @@ class AuthController extends Controller
         else
             return redirect()->back()->withInput()
                     ->with('message',$verification->message());
-
-
     }
 }

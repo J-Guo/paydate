@@ -17,6 +17,13 @@ Route::get('/', function () {
 
 //user page
 Route::group(['middleware'=>'web'],function(){
+
+    //temporary, delete it when project launches
+    Route::get('signin','HomeController@showLogin');
+
+    //temporary, delete it when project launches
+    Route::post('signin','HomeController@handleLogin');
+
     Route::get('login', 'PagesController@showLoginPage');
     //page to input one time password
     Route::get('otp', 'PagesController@showOTPPage');

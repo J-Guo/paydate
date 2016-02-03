@@ -1,8 +1,7 @@
 @extends('layouts.user')
 
 @section('content')
-
-        <!-- Content -->
+<!-- Content -->
 <!-- Page-Title -->
 <div class="row">
     <div class="col-sm-12">
