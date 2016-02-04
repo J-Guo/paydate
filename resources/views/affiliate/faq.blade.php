@@ -190,7 +190,7 @@
     </div>
 
         <div class="card-box">
-            <button onclick="location.href = '{{url('personal-detail')}}'" class="btn btn-block btn--md btn-pink waves-effect waves-light">Yes I understand </button>
+            <button onclick="location.href = '{{url('apersonal-detail')}}'" class="btn btn-block btn--md btn-pink waves-effect waves-light">Yes I understand </button>
         </div>
 
 @stop

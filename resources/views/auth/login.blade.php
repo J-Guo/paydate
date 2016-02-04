@@ -39,8 +39,14 @@
                                 <input class="form-control" type="text"  placeholder="Mobile Number" name="mobile" data-parsley-type="digits" required>
                                 <i class="md md-phone form-control-feedback l-h-34"></i>
                             </div>
+                            <div class="checkbox checkbox-primary">
+                                <input id="checkbox2" type="checkbox" checked="">
+                                <label for="checkbox2">
+                                    Allow Pay-date use your location
+                                </label>
+                            </div>
                             {{csrf_field()}}
-                            <input type="hidden" id="userType" name="userType" value="user">
+                            <input type="hidden" id="userType" name="userType" value="client">
                             <div class="login-field ">
                                 <button class="btn btn-block w-lg btn-purple waves-effect waves-light" id="userSubmit">Find a Pay-date
                                 </button>

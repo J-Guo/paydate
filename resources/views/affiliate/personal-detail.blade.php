@@ -62,14 +62,6 @@
                         </div>
                     </div>
                 </div><!-- /.form-group -->
-                <div class="form-group bordered-bottom">
-                    <div class="checkbox checkbox-primary">
-                        <input id="checkbox2" type="checkbox" checked="">
-                        <label for="checkbox2">
-                            Allow Pay-date use your location
-                        </label>
-                    </div>
-                </div>
             </form><!-- /form -->
         </div><!-- /.panel-body -->
     </div>

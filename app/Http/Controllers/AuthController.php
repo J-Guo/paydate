@@ -11,10 +11,6 @@ use App\Client;
 
 class AuthController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function submitOTP(Request $request){
 
@@ -76,8 +72,9 @@ class AuthController extends Controller
 
         //for token test, change it when project goes alive
         if($verification->ok()){
-            if($userType =="user")
-            return redirect('main');
+            //redirect page depends on user type
+            if($userType =="client")
+            return redirect('personal-detail');
             if($userType="affiliate")
                 return redirect('faq');;
         }

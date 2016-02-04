@@ -11,11 +11,6 @@ use Illuminate\View\View;
 
 class PagesController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     
     public function showLoginPage(){
         return view('auth.login');
@@ -23,6 +18,10 @@ class PagesController extends Controller
 
     public function showOTPPage(){
         return view('auth.otp');
+    }
+
+    public function showClientDetail(){
+        return view('personal-detail');
     }
 
     public function showMainPage(){
@@ -69,7 +68,7 @@ class PagesController extends Controller
      * show personal details page
      * @return View
      */
-    public function showPersonalDetail(){
+    public function showAffilateDetail(){
         return view('affiliate.personal-detail');
     }
 

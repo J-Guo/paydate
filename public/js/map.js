@@ -2,7 +2,7 @@
  * Created by Eric.G on 13/01/2016.
  */
 
-    confirm('Paydate wants to know your location');
+   // confirm('Paydate wants to know your location');
 
 var app = new Vue({
     el: 'body',

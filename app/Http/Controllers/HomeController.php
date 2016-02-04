@@ -37,4 +37,12 @@ class HomeController extends Controller
                 return redirect('signin');
 
     }
+
+    //temporary login page for collobrator to sign out,delete it when project launches
+    public function showLogout(){
+
+        Auth::logout();
+        return redirect('auth.signin');
+
+    }
 }

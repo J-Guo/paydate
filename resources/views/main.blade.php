@@ -21,7 +21,7 @@
                 <h4 class="m-t-0 m-b-20 header-title"><b>Markers</b></h4>
                 <form @submit.prevent="locateAddress" id="locationForm">
                     <input type="text" id="address" v-model="address" placeholder="123 Example St">
-                    <button class="btn btn-info w-xs" type="submit">Locate</button>
+                    <button class="btn btn-info w-xs" type="submit">Search Date</button>
                 </form>
                 <div id="User-Map" class="gmaps"></div>
             </div>
