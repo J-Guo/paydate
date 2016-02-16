@@ -61,6 +61,8 @@
 
     <!--Build Vue.js -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.14/vue.min.js"></script>
+    <!--Build Loading Overlay -->
+    <script src="{{asset('js/pages/loadingoverlay.js')}}"></script>
     <!--Build Page JavaScripts -->
     <script src="{{asset('js/map.js')}}"></script><!-- JS for map-->
     <!--Build Google Map API -->

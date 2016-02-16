@@ -22,6 +22,15 @@ var app = new Vue({
 
         //transfer address into coordinates
         locateAddress: function(){
+            // Show full page loading overlay when user makes a location search
+            $.LoadingOverlay("show");
+
+            // Hide loading overlay after 3 seconds
+            setTimeout(function(){
+                $.LoadingOverlay("hide");
+            }, 1500);
+
+            //initialize geocoder
             var geocoder = new google.maps.Geocoder();
             var vm = this;
 
@@ -34,7 +43,8 @@ var app = new Vue({
                 var imgURL3 = 'images/3.jpg';
                 var imgURL4 = 'images/4.jpg';
 
-                //google map infoWindow content
+                //Google map infoWindow content
+                //if user profile is public
                 var contentPublic ='Luce Allen'+
                     '<br><img src="'+imgURL+'" style="height:50px;width:50px;">' +
                     '<img src="'+imgURL2+'" style="height:50px;width:50px;">'+
@@ -43,6 +53,7 @@ var app = new Vue({
                     '<a href="aprofile">'+
                     'Go To Her Profile!</a>';
 
+                //if user profile is private
                 var contentPrivate ="Oops.Her profile is private";
 
                 //google map infoWindow
